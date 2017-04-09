@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html style="font-family: monospace">
+
+<head>
+    <title></title>
+</head>
+
+<body>
+    <h1>Hello, you are registered!!!!</h1>
+    <h2>You'll get stackOverflow notifications (unread) every 10 minutes in messenger now!</h2>
+    <h5>(If you're active enough to have any :D)</h5>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var code = getParameterByName("code");
+        $.get('/registered-code', {
+            code: code
+        })
+
+        function getParameterByName(name, url) {
+            if (!url) {
+                url = window.location.href;
+            }
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?#&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+    })
+</script>
+
+</html>

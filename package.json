@@ -1,0 +1,19 @@
+{
+  "name": "unread-st",
+  "version": "1.0.0",
+  "description": "stack unread notifications",
+  "main": "index.js",
+  "scripts": {
+    "test": "hahaha",
+    "start": "node index.js"
+  },
+  "author": "Tanmay Rajani",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "bootbot": "^1.0.9",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.25",
+    "request": "^2.81.0"
+  }
+}
