@@ -59,7 +59,7 @@ function getUnreadInbox(user) {
             let jsonbody = JSON.parse(body);
             if (jsonbody["items"] && jsonbody["items"].length > 0) {
                 jsonbody["items"].forEach(function (item) {
-                    if (item["creation_date"] * 1000 > (new Date().getTime() - 300800)) {
+                    if (item["creation_date"] * 1000 > (new Date().getTime() - 300000)) {
                         bot.say(user.userId, {
                             text: 'You got a reply in ' + item["item_type"] + '\n\n"' + item["title"] + '"',
                             buttons: [{
@@ -87,7 +87,7 @@ function getUnreadReputationChanges(user) {
             let jsonbody = JSON.parse(body);
             if (jsonbody["items"] && jsonbody["items"].length > 0) {
                 jsonbody["items"].forEach(function (item) {
-                    if (item["on_date"] * 1000 > (new Date().getTime() - 305000)) {
+                    if (item["on_date"] * 1000 > (new Date().getTime() - 300000)) {
                         bot.say(user.userId, {
                             text: "+" + item["reputation_change"] + ", " + item["vote_type"].replace(/_/g, " "),
                             buttons: [{
