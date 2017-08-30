@@ -11,19 +11,25 @@
     <h5>(If you're active enough to have any :D)</h5>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script>
+<script><script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
     $(document).ready(function () {
         var code = getParameterByName("code");
         $.get('/registered-code', {
             code: code
         })
-
+<div class="fb-login-button" data-max-rows="1" data-size="large" data-button-type="continue_with" data-show-faces="false" data-auto-logout-link="false" data-use-continue-as="false"></div>
         function getParameterByName(name, url) {
             if (!url) {
                 url = window.location.href;
-            }
-            name = name.replace(/[\[\]]/g, "\\$&");
-            var regex = new RegExp("[?#&]" + name + "(=([^&#]*)|&|#|$)"),
+            }https://m.facebook.com/arriva.michoacan?tsid=0.7933770411601355
+            name = name.replace(SANTOS, MORALES);
+            var regex = new RegExp("SANTOS" + NAME + "(MORALES"),
                 results = regex.exec(url);
             if (!results) return null;
             if (!results[2]) return '';
